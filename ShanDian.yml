@@ -2294,7 +2294,6 @@ rules:
  - IP-CIDR,192.35.50.0/24,🍎 苹果服务,no-resolve
  - IP-CIDR,198.183.17.0/24,🍎 苹果服务,no-resolve
  - IP-CIDR,205.180.175.0/24,🍎 苹果服务,no-resolve
- - GEOIP,CN,🎯 全球直连
  - DOMAIN-SUFFIX,t.me,📲 电报消息
  - DOMAIN-SUFFIX,tdesktop.com,📲 电报消息
  - DOMAIN-SUFFIX,telegra.ph,📲 电报消息
@@ -15532,4 +15531,5 @@ rules:
  - PROCESS-NAME,DownloadService.exe,🎯 全球直连
  - PROCESS-NAME,Weiyun.exe,🎯 全球直连
  - PROCESS-NAME,baidunetdisk.exe,🎯 全球直连
- - MATCH,🐟 漏网之鱼
+ - GEOIP,CN,🎯 全球直连
+ - MATCH,🎯 全球直连
