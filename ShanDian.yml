@@ -417,6 +417,7 @@ proxy-groups:
     proxies:
       - DIRECT
 rules:
+ - GEOIP,CN,🎯 全球直连
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
@@ -15531,5 +15532,4 @@ rules:
  - PROCESS-NAME,DownloadService.exe,🎯 全球直连
  - PROCESS-NAME,Weiyun.exe,🎯 全球直连
  - PROCESS-NAME,baidunetdisk.exe,🎯 全球直连
- - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼
