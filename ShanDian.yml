@@ -1,6 +1,6 @@
 port: 7890
 socks-port: 7891
-allow-lan: true
+allow-lan: false
 mode: Rule
 log-level: info
 external-controller: :9090
@@ -417,7 +417,6 @@ proxy-groups:
     proxies:
       - DIRECT
 rules:
- - GEOIP,CN,🎯 全球直连
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
@@ -2295,6 +2294,7 @@ rules:
  - IP-CIDR,192.35.50.0/24,🍎 苹果服务,no-resolve
  - IP-CIDR,198.183.17.0/24,🍎 苹果服务,no-resolve
  - IP-CIDR,205.180.175.0/24,🍎 苹果服务,no-resolve
+ - GEOIP,CN,🎯 全球直连
  - DOMAIN-SUFFIX,t.me,📲 电报消息
  - DOMAIN-SUFFIX,tdesktop.com,📲 电报消息
  - DOMAIN-SUFFIX,telegra.ph,📲 电报消息
