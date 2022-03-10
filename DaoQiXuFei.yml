@@ -94,8 +94,6 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
@@ -157,8 +155,6 @@ proxy-groups:
   type: select
   proxies:
     - 🔰国外流量
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
@@ -213,8 +209,6 @@ proxy-groups:
   type: select
   proxies:
     - 🔰国外流量
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
@@ -269,8 +263,6 @@ proxy-groups:
   type: select
   proxies:
     - 🔰国外流量
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
@@ -325,8 +317,6 @@ proxy-groups:
   type: select
   proxies:
     - 🚀直接连接
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
@@ -381,8 +371,6 @@ proxy-groups:
   type: select
   proxies:
     - 🔰国外流量
-    - '*唯一官网 xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
-    - '*请开启自动更新订阅* *无法使用请更新订阅*'
     - 'AU 001'
     - 'CA 001'
     - 'DE 001'
