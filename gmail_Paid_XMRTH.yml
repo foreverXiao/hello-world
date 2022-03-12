@@ -117,7 +117,10 @@ proxies:
 proxy-groups:
 -
   name: 🔰国外流量
-  type: select
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
   proxies:
     - '*唯一官网 xmrth.com * *国内加速官网 c.xmrth.com * *telegram群组 https://t.me/xmrthcom1*'
     - '*请开启自动更新订阅* *无法使用请更新订阅*'
