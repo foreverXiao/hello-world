@@ -14,7 +14,7 @@ socks-port: 7891
 redir-port: 7892 
 
 # 允许局域网的连接
-allow-lan: true
+allow-lan: false
 
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: rule
@@ -25,7 +25,6 @@ log-level: silent
 # Clash 的 RESTful API
 
 # RESTful API 的口令
-secret: '' 
 
 # 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
 # 参数应填写配置目录的相对路径或绝对路径。
