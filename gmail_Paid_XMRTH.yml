@@ -1,15 +1,45 @@
-port: 7890
-socks-port: 7891
-allow-lan: false
-mode: Rule
-log-level: info
-external-controller: :9090
+#---------------------------------------------------#
+## 更新：2022-03-14 08:09:40
+## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
+## 链接：https://xmrth-subscribe.xyz/link/6kkNaQQO0otUqba8?clash=1
+#---------------------------------------------------#
+
+# HTTP 代理端口
+port: 7890 
+
+# SOCKS5 代理端口
+socks-port: 7891 
+
+# Linux 和 macOS 的 redir 代理端口
+redir-port: 7892 
+
+# 允许局域网的连接
+allow-lan: true
+
+# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
+mode: rule
+
+# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
+# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: silent
+# Clash 的 RESTful API
+external-controller: '0.0.0.0:9090'
+
+# RESTful API 的口令
+secret: '' 
+
+# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
+# 参数应填写配置目录的相对路径或绝对路径。
+# external-ui: folder
+
 
 proxies:
+  - {"name":"*唯一官网 xmrth.com * *国内加速官网 c.xmrth.com * *telegram群组 https://t.me/xmrthcom1*","type":"vmess","server":"https://t.me/xmrthcom1","port":443,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"*请开启自动更新订阅* *无法使用请更新订阅*","type":"vmess","server":"8.8.8.8","port":443,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":0,"cipher":"auto","udp":true}
   - {"name":"AU 001","type":"vmess","server":"aulin001.xmrth-node.xyz","port":10131,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"CA 001","type":"vmess","server":"calin001.xmrth-node.xyz","port":10076,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"DE 001","type":"vmess","server":"delin001.xmrth-node.xyz","port":10132,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"HK 001","type":"vmess","server":"hkaws001.xmrth-node.xyz","port":10000,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 001","type":"vmess","server":"hkaws001.xmrth-node.xyz","port":10148,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 002","type":"vmess","server":"hkaws002.xmrth-node.xyz","port":10001,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 003","type":"vmess","server":"hkaws003.xmrth-node.xyz","port":10002,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 004","type":"vmess","server":"hkaws004.xmrth-node.xyz","port":10003,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
@@ -20,14 +50,20 @@ proxies:
   - {"name":"HK 009","type":"vmess","server":"hkaws009.xmrth-node.xyz","port":10071,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 010","type":"vmess","server":"hkaws010.xmrth-node.xyz","port":10072,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 101","type":"vmess","server":"hkaz1.xmrth-node.xyz","port":10128,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"HK 102","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10005,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"HK 103","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10006,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 102","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10145,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 103","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10147,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK 104","type":"vmess","server":"hkaz4.xmrth-node.xyz","port":10011,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"HK 201","type":"vmess","server":"hgc1.xmrth-node.xyz","port":10050,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 105","type":"vmess","server":"hkaz5.xmrth-node.xyz","port":10077,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 106","type":"vmess","server":"hkaz6.xmrth-node.xyz","port":10078,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 107","type":"vmess","server":"hkaz7.xmrth-node.xyz","port":10079,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK 201","type":"vmess","server":"hgc1.xmrth-node.xyz","port":10151,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK A 001","type":"vmess","server":"hkaz1.xmrth-node.xyz","port":10007,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK A 002","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10008,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK A 003","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10009,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"HK A 004","type":"vmess","server":"hkaz4.xmrth-node.xyz","port":10010,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK A 005","type":"vmess","server":"hkaz5.xmrth-node.xyz","port":10080,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK A 006","type":"vmess","server":"hkaz6.xmrth-node.xyz","port":10152,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"HK A 007","type":"vmess","server":"hkaz7.xmrth-node.xyz","port":10082,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"IN A 001","type":"vmess","server":"hkaz1.xmrth-node.xyz","port":10033,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"IN A 002","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10034,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"IN A 003","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10035,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
@@ -57,18 +93,24 @@ proxies:
   - {"name":"KR A 002","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10018,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"KR A 003","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10019,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"KR A 004","type":"vmess","server":"hkaz4.xmrth-node.xyz","port":10143,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 001","type":"vmess","server":"sgaws001.xmrth-node.xyz","port":10021,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 002","type":"vmess","server":"sgaws002.xmrth-node.xyz","port":10022,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 003","type":"vmess","server":"sgaws003.xmrth-node.xyz","port":10023,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 004","type":"vmess","server":"sgaws004.xmrth-node.xyz","port":10024,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 005","type":"vmess","server":"sgaws005.xmrth-node.xyz","port":10025,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 006","type":"vmess","server":"sgaws006.xmrth-node.xyz","port":10073,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"SG 007","type":"vmess","server":"sgaws007.xmrth-node.xyz","port":10074,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"KR A 005","type":"vmess","server":"hkaz5.xmrth-node.xyz","port":10083,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"KR A 006","type":"vmess","server":"hkaz6.xmrth-node.xyz","port":10154,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"KR A 007","type":"vmess","server":"hkaz7.xmrth-node.xyz","port":10087,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 001","type":"vmess","server":"sgaws001.xmrth-node.xyz","port":10155,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 002","type":"vmess","server":"sgaws002.xmrth-node.xyz","port":10156,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 003","type":"vmess","server":"sgaws003.xmrth-node.xyz","port":10157,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 004","type":"vmess","server":"sgaws004.xmrth-node.xyz","port":10158,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 005","type":"vmess","server":"sgaws005.xmrth-node.xyz","port":10159,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 006","type":"vmess","server":"sgaws006.xmrth-node.xyz","port":10160,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG 007","type":"vmess","server":"sgaws007.xmrth-node.xyz","port":10161,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"SG A 001","type":"vmess","server":"hkaz1.xmrth-node.xyz","port":10026,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"SG A 002","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10027,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"SG A 003","type":"vmess","server":"hkaz3.xmrth-node.xyz","port":10028,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"SG A 004","type":"vmess","server":"hkaz4.xmrth-node.xyz","port":10029,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
-  - {"name":"TW 1","type":"vmess","server":"tw1.xmrth-node.xyz","port":10061,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG A 005","type":"vmess","server":"hkaz5.xmrth-node.xyz","port":10089,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG A 006","type":"vmess","server":"hkaz6.xmrth-node.xyz","port":10153,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"SG A 007","type":"vmess","server":"hkaz7.xmrth-node.xyz","port":10085,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
+  - {"name":"TW 1","type":"vmess","server":"tw1.xmrth-node.xyz","port":10149,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"TW 2","type":"vmess","server":"tw2.xmrth-node.xyz","port":10065,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"TW A 1","type":"vmess","server":"hkaz1.xmrth-node.xyz","port":10062,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"TW A 2","type":"vmess","server":"hkaz2.xmrth-node.xyz","port":10066,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
@@ -109,11 +151,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -143,6 +191,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -154,6 +205,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -200,11 +254,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -234,6 +294,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -245,6 +308,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -284,11 +350,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -318,6 +390,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -329,6 +404,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -368,11 +446,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -402,6 +486,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -413,6 +500,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -452,11 +542,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -486,6 +582,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -497,6 +596,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -536,11 +638,17 @@ proxy-groups:
     - 'HK 102'
     - 'HK 103'
     - 'HK 104'
+    - 'HK 105'
+    - 'HK 106'
+    - 'HK 107'
     - 'HK 201'
     - 'HK A 001'
     - 'HK A 002'
     - 'HK A 003'
     - 'HK A 004'
+    - 'HK A 005'
+    - 'HK A 006'
+    - 'HK A 007'
     - 'IN A 001'
     - 'IN A 002'
     - 'IN A 003'
@@ -570,6 +678,9 @@ proxy-groups:
     - 'KR A 002'
     - 'KR A 003'
     - 'KR A 004'
+    - 'KR A 005'
+    - 'KR A 006'
+    - 'KR A 007'
     - 'SG 001'
     - 'SG 002'
     - 'SG 003'
@@ -581,6 +692,9 @@ proxy-groups:
     - 'SG A 002'
     - 'SG A 003'
     - 'SG A 004'
+    - 'SG A 005'
+    - 'SG A 006'
+    - 'SG A 007'
     - 'TW 1'
     - 'TW 2'
     - 'TW A 1'
@@ -1722,9 +1836,6 @@ rules:
   - DOMAIN-SUFFIX,zhihu.com,DIRECT
   - DOMAIN-SUFFIX,zhimg.com,DIRECT
   - DOMAIN-SUFFIX,zhuihd.com,DIRECT
-  - DOMAIN-SUFFIX,gensee.com,DIRECT
-  - DOMAIN-SUFFIX,ktkt.com,DIRECT
-  - DOMAIN-SUFFIX,windows.com,DIRECT
   - DOMAIN,download.jetbrains.com,DIRECT
   - DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
   - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
