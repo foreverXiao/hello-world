@@ -1,39 +1,11 @@
-#---------------------------------------------------#
-## 更新：2022-03-12 01:18:13
-## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
-## 链接：https://xmrth-subscribe.xyz/link/6kkNaQQO0otUqba8?clash=1
-#---------------------------------------------------#
-
-# HTTP 代理端口
-port: 7890 
-
-# SOCKS5 代理端口
-socks-port: 7891 
-
-# Linux 和 macOS 的 redir 代理端口
-redir-port: 7892 
-
-# 允许局域网的连接
+port: 7890
+socks-port: 7891
 allow-lan: false
-
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
-mode: rule
-
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
-# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: silent
-# Clash 的 RESTful API
-
-# RESTful API 的口令
-
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
-# external-ui: folder
-
+mode: Rule
+log-level: info
+external-controller: :9090
 
 proxies:
-  - {"name":"*唯一官网 xmrth.com * *国内加速官网 c.xmrth.com * *telegram群组 https://t.me/xmrthcom1*","type":"vmess","server":"https://t.me/xmrthcom1","port":443,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"*请开启自动更新订阅* *无法使用请更新订阅*","type":"vmess","server":"8.8.8.8","port":443,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":0,"cipher":"auto","udp":true}
   - {"name":"AU 001","type":"vmess","server":"aulin001.xmrth-node.xyz","port":10131,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"CA 001","type":"vmess","server":"calin001.xmrth-node.xyz","port":10076,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
   - {"name":"DE 001","type":"vmess","server":"delin001.xmrth-node.xyz","port":10132,"uuid":"a685d5ce-ba3a-3548-ae94-84933f6080b6","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"www.baidu.com"}},"ws-path":"/index","ws-headers":{"Host":"www.baidu.com"}}
