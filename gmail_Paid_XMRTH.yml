@@ -1724,6 +1724,7 @@ rules:
   - DOMAIN-SUFFIX,zhuihd.com,DIRECT
   - DOMAIN-SUFFIX,gensee.com,DIRECT
   - DOMAIN-SUFFIX,ktkt.com,DIRECT
+  - DOMAIN-SUFFIX,windows.com,DIRECT
   - DOMAIN,download.jetbrains.com,DIRECT
   - DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
   - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
