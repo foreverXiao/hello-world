@@ -1,0 +1,8 @@
+rules:
+  - SCRIPT,quic,REJECT
+  - RULE-SET,proxy-domain,Proxy
+  - RULE-SET,apple-direct,DIRECT
+  - RULE-SET,lan-cidr,DIRECT
+  - RULE-SET,ip-cidr-text,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
